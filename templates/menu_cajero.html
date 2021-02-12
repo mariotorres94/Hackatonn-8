@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .texto-centrado{
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .contenedor{
+            margin: 0 auto;
+            max-width: 600px;
+            margin-top: 60px;
+        }
+        .navegacion a{
+            color: black;
+            font-size: 25px;
+            text-decoration: none;
+        }
+        .navegacion ul > li{
+            list-style: none;
+            margin: 30px 0px;
+        }
+        .navegacion ul li a:hover{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor">
+        <h1 class="texto-centrado">Menu de Cajero</h1>
+        <nav class="navegacion">
+            <ul>
+                <li>
+                    <a href="{{ url_for('crear_cliente') }}">Registro Cliente</a>
+                </li>
+                <li>
+                    <a href="{{ url_for('read_all_clients') }}">Leer todos los clientes</a>
+                </li>
+                <li>
+                    <a href="{{ url_for('read_a_client') }}">Leer cliente</a>
+                </li>
+                <li>
+                    <a href="#">Actualizar cliente</a>
+                </li>
+                <li>
+                    <a href="#">Eliminar Cliente</a>
+                </li>
+                <li>
+                    <a href="#">Salir</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    
+</body>
+</html>

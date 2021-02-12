@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            text-align: center;
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 35px;
+        }
+        #formulario{
+            margin: 0 auto;
+            max-width: 500px;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid #666666;
+        }
+        #formulario p{
+            font-weight: bold;
+            margin: 30px 0px;
+        }
+        #formulario label{
+            margin-right: 20px;
+        }
+        #formulario input{
+            margin-top: 15px;
+            border-radius: 10px;
+            padding: 6px;
+        }
+        #btn-guardar{
+            margin-bottom: 20px;
+            margin-right: 25px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Creacion de Cliente</h2>
+
+    <form id="formulario" action="" method="POST">
+        <p><label for="nombres">Nombres: </label>
+            <br>
+            <input type="text" name="nombres" placeholder="Ingrese su nombre" size="45px"></p>
+        
+        <p><label for="apellido_pat">Apellido Paterno: </label>
+            <br>
+            <input type="text" name="apellido_pat" placeholder="Ingrese su apellido paterno" size="45px"></p>
+        
+        <p><label for="apellido_mat">Apellido Materno: </label>
+            <br>
+            <input type="text" name="apellido_mat" placeholder="Ingrese su apellido materno" size="45px"></p>
+        
+        <p><label for="direccion">Direccion: </label>
+            <br>
+            <input type="text" name="direccion" placeholder="Ingrese su direccion" size="45px"></p>
+
+        <p><label for="celular">Celular: </label>
+            <br>
+            <input type="text" name="celular" placeholder="Ingrese su celular" size="45px"></p>
+        
+        <input id="btn-guardar" type="submit" value="Guardar" onmouseover="cambiar_manita(this)">
+
+        <a href="{{ url_for('home') }}"><input id="btn-salir" type="button" value="Salir" onmouseover="cambiar_manita(this)"></a>
+    </form>
+
+    <script>
+        let a = document.getElementById('btn-guardar');
+        let b = document.getElementById('btn-salir');
+        function cambiar_manita(a,b){
+            a.style.cursor = 'pointer';
+            b.style.cursor = 'pointer';
+        }
+    </script>
+</body>
+</html>

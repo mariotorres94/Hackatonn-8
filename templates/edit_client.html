@@ -1,0 +1,13 @@
+
+<form action="/update/{{client.0}}" method="POST">
+    
+    <input type="text" name="nombres" placeholder="Editar Nombres" value="{{ client.1}}">
+    <input type="text" name="apellido_pat" placeholder="Editar Apellido Paterno" value="{{ client.2}}">
+    <input type="text" name="apellido_mat" placeholder="Editar Apellido Materno" value="{{ client.3}}">
+    <input type="text" name="direccion" placeholder="Editar Direccion" value="{{ client.4}}">
+    <input type="text" name="celular" placeholder="Editar Celular" value="{{ client.5}}">
+
+    <button type="submit">
+        Save
+    </button>
+</form>
